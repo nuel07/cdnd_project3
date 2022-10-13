@@ -1,0 +1,13 @@
+#configuration variables
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: configuration-values
+data:
+  POSTGRES_HOST: "nuel-mono-micro-db.cniq7k3k9pxf.us-east-1.rds.amazonaws.com"
+  POSTGRES_DB: "postgres"
+  AWS_BUCKET: "arn:aws:s3:::nuel-mono-micro"
+  AWS_REGION: "us-east-1"
+  AWS_PROFILE: "default"
+  JWT_SECRET: "testing"
+  URL: "http://localhost:8100"
