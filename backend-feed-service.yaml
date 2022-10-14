@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nuel-feed
+  name: backend-feed
   labels:
-    run: nuel-feed
+    run: backend-feed
 spec:
   ports:
   - port: 80
     targetPort: 8080
     protocol: TCP
   selector:
-    run: nuel-feed
+    run: backend-feed
