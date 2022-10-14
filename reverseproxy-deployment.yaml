@@ -27,9 +27,9 @@ spec:
              cpu: "500m"
          envFrom:
            - secretRef:
-               name: aws-secret
+               name: nuelaws
            - configMapRef:
-               name: env-configmap
+               name: env-config
            - secretRef:
                name: env-secret
          ports:

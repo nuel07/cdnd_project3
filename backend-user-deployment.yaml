@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nuel-user
+  name: backend-user
   labels:
-    app: nuel-user
+    app: backend-user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nuel-user
+      app: backend-user
   template:
     metadata:
       labels:
-        app: nuel-user
+        app: backend-user
     spec:
       containers:
        - name: udagram-api-user
@@ -20,17 +20,17 @@ spec:
          imagePullPolicy: Always
          resources:
            requests:
-             memory: "128Mi"
+             memory: "800Mi"
              cpu: "250m"
            limits:
-             memory: "1024Mi"
+             memory: "1700Mi"
              cpu: "500m"
          envFrom:
            - secretRef:
                name: env-secret
            - configMapRef:
-               name: env-configmap
+               name: env-config
            - secretRef:
-               name: aws-secret
+               name: nuelaws
          ports:
          - containerPort: 8080
